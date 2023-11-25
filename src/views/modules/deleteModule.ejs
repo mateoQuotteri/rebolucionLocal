@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="background-blue">
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <main class="hidden" id="main">
+    <section  class="big-container bg-color-blue-dark ">
+
+        <div class="false-box background-light-color-box-from-behind">
+        <form  action="/module/deletemodule/<%=module.id%>?_method=DELETE" method="POST" 
+            class="form background-light-color"id="formulario" 
+        enctype="">
+        <h1 class="orange">¡Elimina Modulos!</h1>
+        <label class="white" for="lastname">El modulo que eliminaras es:</label>
+        <input type="text" required class="login-input" 
+          id="title" name="title"
+        value=" <%=module.title%>" >
+
+        <label class="white" for="lastname">Cuyo ID es:</label>
+        <input type="text" required class="login-input" 
+          id="title" name="title"
+        value=" <%=module.id%>" >    
+
+
+        <h5 class="white">Eliminaras tambien todas sus unidades correspondientes</h5>
+
+        <div class="btn-container">
+            <input type="submit" 
+            name="sumbit" class="button white background-orange "id="" 
+            value="Eliminar">
+                </div>
+        
+
+
+        </form>
+    </div>
+    </section>
+</main>
+</body>
+<script src="/js/loading.js"></script>
+
+</html>

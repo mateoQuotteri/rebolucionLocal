@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/unitDetail.css">
+    <link rel="stylesheet" href="/styles/moduleDetail.css">
+    <title>Modulos - Rebolucion</title>
+
+  </head>
+<body class="background-blue">
+  <div class="loading" id="loading">
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+    <header class="hidden" id="header">
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="https://rebolucion-production.up.railway.app/module">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
+   
+    <main class="hidden" id="main">
+
+      <section class="big-container" >
+        <h1 class="white"><%= module.title %></h1>
+
+
+        <article class="info-container">
+            <div class="video">
+                <iframe src="<%= module.video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="info">
+              <h4  class="white">
+                <%= module.shortDescription %>
+            </h4>
+
+            <h6 class="white">Dificultad:<%= module.difficulty %>/10</h6>
+
+            <h6  class="white">
+              Profesor: 
+              <%= teacher.name %>
+          </h6>
+
+            </div>
+        </article>
+</section>
+
+      
+        <section class="principal-section">  
+            <h3 class="white">Sus unidades:</h3>
+
+            <section class="sub-section">
+
+           
+                <% unitsOfModule.forEach(unit => {%>
+                  <div class="false-box background-light-color-box-from-behind">
+                    <div class="background-light-color  div-inside">
+                      <h6 class="white">
+                        <%= unit.title %>
+                      </h6>
+                      <a class="background-orange  white" href="https://rebolucion-production.up.railway.app/unit/<%= unit.id %>">
+                        <button class="background-orange white">
+                            Iniciar
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+              <% }); %>
+                
+            </section>
+      </section>
+
+      <footer class="background-footer">
+        <section  class="footer-section">
+          <a href="https://twitter.com/rebolucionnn">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        </section>
+        <section class="footer-section">
+          <a href="https://open.spotify.com/show/3EyKX9xEgU0K7WfyWXI9Sr">
+          <i class="fa-solid fa-podcast"></i>
+        </a>
+        </section>
+        <section class="footer-section">
+          <a href="https://tiktok.com/@rebolucionw3">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        </section>
+        <section class="footer-section">
+          <a class="header-a "href="">
+             <i  class="fa-brands fa-discord"></i>
+          </a>
+        </section>
+      </footer>
+    
+</body>
+<script src="/js/loadingWithHeader.js"></script>
+
+</html>
+
+<!--<section style="display: block;" >
+    <h1 style="display: block;">El modulo que has seleccionado es el <%= module.title %> </h1>
+    <br>
+    <h4 style="display: block;"> Su descripcion es:</h4>
+    <h5 style="display: block;" > <%= module.shortDescription %> </h5>
+    <h3>Sus unidades son : </h3>
+    <h1><%= module.unitss.title %>  </h1>
+    <p style="display: block;">
+        <%= module.unitss.description %>
+    </p>
+</section>-->

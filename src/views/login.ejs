@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include ("./partials/head") %> 
+        
+        <link rel="stylesheet" href="/styles/login.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    </head>
+    <body class="background-blue">
+        <div class="loading" id="loading">
+            <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+        <main class="" id="main">
+            <section class="section"> 
+                <img src="/images/rebolucionLogoWeb.png" alt="" srcset="" class="imagen-register">
+            </section>
+            <section class="big-container bg-color-blue-dark section">
+                <div class="title-container">
+                    <div class="background-orange or-bar"></div>
+                    <h1 class="white">Login</h1>
+                </div>
+                
+                <div class="false-box background-light-color-box-from-behind">
+                    <form action="/user/login" class="form background-light-color" method="POST" id="formulario" 
+                    enctype="">
+                    
+                    <input type="email" required class="login-input background-white"
+                    placeholder="Correo electronico"  id="email" name="email"
+                    value="<%= locals.old && old.email %>"
+                    >
+                    
+                    
+                    
+                    <input type="password" required class="login-input background-white" 
+        placeholder="Contraseña" id="password" name="password"
+        value="<%= locals.old && old.password %>">
+        
+        <% if (locals.errors && errors.password) { %>
+            <div class="error-container background-button-error">
+                <p class="error orange">
+                    <%= errors.password.msg %>
+                </p>
+            </div>
+            <% } %>
+            <% if (locals.errors && errors.email) { %>
+                <div class="error-container background-button-error">
+                    <p class="error orange">
+                        <%= errors.email.msg %>
+                    </p>
+                </div>
+                <% } %>
+                <% if (locals.erorrOnLogin) { %>
+                    <div class="error-container background-button-error">
+                        <p class="orange error"><%= locals.erorrOnLogin.msg %>
+                        </p>
+                    </div>
+                    <% } %>
+
+                    
+                    
+                    <a href="https://rebolucion-production.up.railway.app/auth/google" class="google-button-container">
+                        <button type="button" class="login-with-google-btn" >
+                            Sign in with Google
+                        </button>
+                            </a>
+                            
+                            
+                            <p class="white p-from-login ">Si aun no tienes cuenta <a 
+                                class="a-from-register lightblue" href="/user/register">create una</a></p>
+                                
+                                <div class="btn-container">
+                                    
+                                    
+                                    <input type="button" id="showPass"  
+                                    class=" button  background-orange white showPass" >
+                                    <input type="submit" 
+                                    name="sumbit" class="button blue background-orange "id="" 
+                                    value="➜">
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </main>
+                
+            </body>
+<script src="/js/showPassOnLogin.js"></script>
+<script src="/js/loading.js"></script>
+            
+        </html>

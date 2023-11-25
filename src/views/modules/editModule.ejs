@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="background-blue">
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <main class="hidden" id="main">
+    <section class="big-container bg-color-blue-dark ">
+
+        <div class="false-box background-light-color-box-from-behind">
+
+        <form  action="/module/editmodule/<%=module.id%>?_method=PUT" method="POST" 
+            class="form background-light-color"id="formulario" 
+        enctype="multipart/form-data">
+        <h1 class="orange">¡Edita Modulos!</h1>
+
+        <label class="white" for="id">ID del modulo:</label>
+
+        <input type="number"  class="login-input" 
+        placeholder="ID del modulo (<%= module.id %>)"  id="id" name="id"
+        value="<%= module.id %>" readonly >
+
+        <label class="white" for="title">Titulo del modulo:</label>
+        <input type="text"  class="login-input" 
+        placeholder="Titulo del modulo (<%= module.title %>)"  id="title" name="title"
+        value="<%= module.title %>" >
+        <% if (locals.errors && errors.title) { %>
+            <p style="color: white">
+                <%= errors.title.msg %>
+            </p>
+            <% } %>
+
+            <label class="white" for="shortDescription">Descripcion del modulo:</label>
+        <input type="text"  class="login-input" 
+        placeholder="Descripcion corta del modulo"  id="shortDescription" name="shortDescription"
+        value="<%= module.shortDescription %>" >
+        <% if (locals.errors && errors.shortDescription) { %>
+            <p style="color: white">
+                <%= errors.shortDescription.msg %>
+            </p>
+            <% } %>
+
+
+            <label class="white"  for="difficulty">Dificultad del modulo:</label>
+        <input type="number"  class="login-input" 
+        placeholder="Dificultad del 1 al 10 (<%= module.difficulty %>)"  id="difficulty" name="difficulty"
+        value="<%= module.difficulty %>" >
+        <% if (locals.errors && errors.difficulty) { %>
+            <p style="color: white">
+                <%= errors.difficulty.msg %>
+            </p>
+            <% } %>
+
+            <label class="white" for="units">Cantidad de unidades del modulo:</label>
+
+        <input type="number"  class="login-input" 
+        placeholder="Cantidad de unidades (<%= module.units %>)"  id="units" name="units"
+        value="<%= module.units %>" >
+        <% if (locals.errors && errors.units) { %>
+            <p style="color: white">
+                <%= errors.units.msg %>
+            </p>
+            <% } %>
+
+
+            <label class="white" for="video">Video del modulo:</label>
+        <input type="text"  class="login-input" 
+        placeholder="Video"  id="video" name="video"
+        value="<%= module.video %>" >
+        <% if (locals.errors && errors.video) { %>
+            <p style="color: white">
+                <%= errors.video.msg %>
+            </p>
+            <% } %>
+
+            <label class="white" for="image">Imagen del modulo:</label>
+        <input type="file"  class="login-input" 
+        placeholder="Imagen del modulo"  id="image" name="newImage" value="<%= module.image %>">
+           
+
+        <div class="btn-container">
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">
+                Editar modulo</button>
+                </div>
+            
+        </form>
+        
+        </div>
+
+
+    </section>
+</main>
+</body>
+<script src="/js/loading.js"></script>
+
+</html>

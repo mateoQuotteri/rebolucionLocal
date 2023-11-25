@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include ("./partials/head") %> 
+
+    <link rel="stylesheet" href="/styles/errorAuth.css">
+    <title>Error en Autenticacion</title>
+</head>
+<body class="background-blue">
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <main class="hidden" id="main">
+        <div>
+            <i class="fa-solid fa-triangle-exclamation orange"></i>
+            <h3 class="white">¡Hubo un error a la hora de realizar la autenticación!</h3>
+
+            <a href="https://rebolucion-production.up.railway.app/user/register" class="">Vuelve a intentarlo</a>
+        </div>
+    </main>
+</section>
+
+
+    </main>
+</body>
+<script src="/js/loading.js"></script>
+
+</html>

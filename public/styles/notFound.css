@@ -1,0 +1,125 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+main .error-container{
+    width: 100%;
+    height: 100%;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-container h1{
+    text-align: left;
+    font-weight: bold;
+    width: 80%;
+}
+.error-container h3{
+    text-align: left;
+    margin-bottom: .8em;
+    width: 80%;
+}
+
+.error-container .icon-container{
+    font-size: 2.5em;
+    width: 80%;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .3em;
+}
+.icon-container i{
+    font-weight: bold;
+
+    font-size: 1.2em;
+}
+.icon-hidden {
+    display: none;
+}
+.icon-hidden-v2{
+    display: none;
+}
+.a-home-container{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1em;
+}
+.a-home-container a{
+    width: 40%;
+    padding: 1em;
+    border-radius: .5em;
+}
+.a-home-container a button{
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container{
+    display: none;
+}
+
+@media(min-width: 400px){
+    .a-home-container a{
+        width: 35%;
+    }
+}
+
+@media(min-width: 520px){
+    .a-home-container a{
+        width: 30%;
+    }
+}
+@media(min-width: 580px){
+    .icon-hidden{
+        display: block;
+    }
+}
+
+@media(min-width: 620px){
+    .a-home-container a{
+        width: 25%;
+    }
+    
+}
+@media(min-width: 860px){
+    .icon-hidden-v2{
+        display: block;
+    }
+}
+
+
+@media(min-width: 950px){
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main .error-container{
+        width: 60%
+    }
+    .image-container{
+        display: block;
+        width: 40%;
+        height: 100%;
+        background-image: url(../images/notFound.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 3em;
+    }
+    .icon-hidden-v2{
+        display: none;
+    }
+}

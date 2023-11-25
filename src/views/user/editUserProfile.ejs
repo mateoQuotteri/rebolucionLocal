@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edita tu perfil</title>
+    <%-include ("../partials/head") %> 
+
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+    <script src="/js/userRegister.js"></script>
+</head>
+
+    <body class="background-blue">
+      <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+        <main class="hidden" id="main" >
+            <section class="big-container bg-color-blue-dark ">
+                <div class="false-box background-light-color-box-from-behind">
+                    <form action="/user/my-profile/edit?_method=PUT" method="POST" class="form background-light-color"id="formulario" 
+                    enctype="">
+                    <h1 class="orange">¡Edita tus datos!</h1>
+                
+                <label class="white"  for="email">Email:</label>
+                <input type="email" required class="login-input" 
+               id="email" name="email"
+                value="<%= user.email %>" >
+                
+                <label class="white"  for="name">Nombre:</label>
+                <input type="text" required class="login-input" 
+                  id="name" name="name"
+                value="<%= user.name %>" >
+
+                <label class="white" for="lastname">Apellido:</label>
+                <input type="text" required class="login-input" 
+                  id="lastname" name="lastname"
+                value="<%= user.lastname %>" >
+
+                <label class="white" for="phone">Celular:</label>
+                <input type="phone" required class="login-input" 
+                 id="phone" name="phone"
+                value="<%= user.phone %>" >
+
+                <label class="white" for="country">Pais:</label>
+                <input type="text" required class="login-input" 
+                  id="country" name="country"
+                value="<%= user.country %>" >
+
+                <label class="white" for="state">Estado o Provincia:</label>
+                <input type="text" required class="login-input" 
+                 id="state" name="state"
+                value="<%= user.state %>" >
+
+                <label class="white" for="city">Ciudad:</label>
+                <input type="text" required class="login-input" 
+                  id="city" name="city"
+                value="<%= user.city %>" >
+
+
+
+                <% if (locals.phoneIsNaN) { %>
+                  <div class="error-container background-button-error">
+                      <p class="orange error"><%= locals.phoneIsNaN.msg %>
+                      </p>
+                  </div>
+                  <% } %>
+
+                
+                <% if (locals.errors && errors.email) { %>
+                  <p style="color: red">
+                      <%= errors.email.msg %>
+                  </p>
+                  <% } %>
+                  <% if (locals.errors && errors.name) { %>
+                    <p style="color: red">
+                        <%= errors.name.msg %>
+                    </p>
+                    <% } %>
+
+                    
+                    <% if(locals.errors && errors.lastname) { %>
+                      <p style="color: red">
+                          <%= errors.lastname.msg %>
+                      </p>
+                      <% } %>
+
+                      <% if (locals.errors && errors.phone) { %>
+                        <p style="color: red">
+                            <%= errors.phone.msg %>
+                        </p>
+                        <% } %>
+
+                        <% if (locals.errors && errors.city) { %>
+                          <p style="color: red">
+                              <%= errors.city.msg %>
+                          </p>
+                          <% } %>
+                          <% if (locals.errors && errors.country) { %>
+                            <p style="color: red">
+                                <%= errors.country.msg %>
+                            </p>
+                            <% } %>
+                            <% if (locals.errors && errors.state) { %>
+                              <p style="color: red">
+                                  <%= errors.state.msg %>
+                              </p>
+                              <% } %>
+               
+                    <div class="btn-container">
+                        <input type="submit" 
+                        name="sumbit" class="button white background-orange "id="" 
+                        value="➜">
+                            </div>
+            </form>
+        </div>
+    </section>
+    </main>
+    </body>
+
+<script src="/js/loading.js"></script>
+  
+
+</html>

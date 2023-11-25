@@ -1,0 +1,139 @@
+main{
+    margin-top: 3em;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:start
+    ;
+}
+
+.big-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.big-container h1{
+    font-weight: bold;
+    text-align: center;
+    width: 75%;
+    font-size: 2em
+}
+
+.info-container{
+    margin-top: 2em;
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+}
+
+.info-container .video{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video iframe{
+    width: 90%;
+    height: 85%;
+}
+
+.info{
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap:wrap ;
+height: 50%;
+}
+
+
+.info h4{
+    width: 85%;
+    margin: 0;
+}
+
+.info h6{
+    width: 85%;
+    text-align: right;
+    font-size: 1.2em;
+
+}
+.div-inside a {
+    width: 45%;
+    border-radius: .8em;
+    text-align: center;
+    margin-top: .4em;
+}
+.div-inside button {
+    width: 100%;
+    border: none;
+    border-radius: .8em;
+    text-align: center;
+    padding: .5em;
+
+}
+@media(min-width: 480px){
+    .info-container{
+        height: 60vh;
+    }
+    
+ }
+
+ @media(min-width: 550px){
+    .info-container{
+        height: 65vh;
+    }
+    .info-container .video{
+        height: 60%;
+    }
+    .info{
+    height: 40%;
+    }
+    
+ }
+
+ @media(min-width: 760px){
+    .info-container{
+        height: 70vh;
+    }
+    
+ }
+ @media(min-width: 860px){
+    .info-container{
+        height: 80vh;
+    }
+
+    
+ }
+
+@media(min-width: 900px){
+    .info-container{
+        height: 50vh;
+        padding: 0em 2em 0em 2em;
+        margin-top: 1em;
+        flex-direction: row;
+        justify-content: space-around
+    }
+    .info-container .video{
+    height: 90%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.info{
+    width: 35%;
+height: 100%;
+}
+
+}

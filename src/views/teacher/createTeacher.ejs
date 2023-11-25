@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %>
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="background-blue">
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+<main class="hidden" id="main">
+    <section class="big-container bg-color-blue-dark">
+        
+
+        <div class="false-box background-light-color-box-from-behind">
+        
+
+        <form action="/teacher/create-teacher" class="form background-light-color" method="POST"id="formulario" 
+        enctype="">
+
+        <h1 class="orange">¡Crea un nuevo profesor!</h1>
+
+
+        <label for="name" class="white" >Nombre y apellido del profesor:</label>
+        <input type="text" required class="login-input" 
+        placeholder=""  id="name" name="name">
+    
+        <label class="white" for="email">Email:</label>
+
+
+        <input type="email" required class="login-input" 
+          id="email" name="email">
+       
+
+      
+            
+            <div class="btn-container">
+                <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">
+                    Crear</button>
+                    </div>
+        </form>
+        </div>
+    </section>
+</main>
+</body>
+<script src="/js/loadingWithHeader.js"></script>
+
+</html>

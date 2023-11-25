@@ -1,0 +1,32 @@
+ header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 25%;
+    padding-left: .8em;
+    padding-top: 1.6em;
+ }
+
+ 
+.button-of-header-container a{
+    text-decoration: none;
+    border-radius: 1em;
+    padding: .8em;
+    font-weight: bold;
+
+ }
+ .button-of-header-container button{
+    border: none; 
+    font-weight: bold;
+    font-size: 1em;
+ }
+
+ @media(min-width: 850px){
+   .button-of-header-container a{
+      display: none;
+  
+   }
+   .button-of-header-container button{
+      display: none;
+   }
+}

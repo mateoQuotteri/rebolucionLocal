@@ -1,0 +1,30 @@
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+ }
+
+ main div i{
+    font-weight: bold;
+    margin-bottom: .4em;
+    font-size: 3.5em;
+ }
+ main div h3{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: .6em;
+
+}
+
+main div a{
+    text-decoration: none;
+}

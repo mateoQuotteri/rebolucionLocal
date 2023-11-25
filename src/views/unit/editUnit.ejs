@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/editUserProfile.css">
+
+    <!--<link rel="stylesheet" href="/styles/register.css">-->
+</head>
+<body class="background-blue">
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <main class="hidden" id="main">
+    <section class="big-container bg-color-blue-dark">
+        <div class="false-box background-light-color-box-from-behind">
+        <form  action="/unit/editunit/<%=unit.id%>?_method=PUT" method="POST" 
+            class="form background-light-color" id="formulario" 
+        enctype="">
+
+        <h1 class="orange">¡Edita Unidades!</h1>
+
+
+        <label  class="white" for="id">ID de la unidad:</label>
+        <input type="number"  class="login-input" 
+        placeholder="ID de la unidad (<%= unit.id %>)"  id="id" name="id"
+        value="<%= unit.id %>" readonly >
+
+<label class="white" for="title">Titulo de la unidad</label>
+        <input type="text"  class="login-input" 
+        placeholder="Titulo de la unidad (<%= unit.title %>)"  id="title" name="title"
+        value="<%= unit.title %>" >
+        <% if (locals.errors && errors.title) { %>
+            <p style="color: white">
+                <%= errors.title.msg %>
+            </p>
+            <% } %>
+
+
+        <label class="white" for="description">Descripcion de la unidad</label>
+        <input type="text"  class="login-input" 
+        placeholder="Descripcion de la unidad"  id="description" name="description"
+        value="<%= unit.description %>" >
+        <% if (locals.errors && errors.description) { %>
+            <p style="color: white">
+                <%= errors.description.msg %>
+            </p>
+            <% } %>
+
+            <label  class="white"for="video">Video de la unidad</label>
+            <input type="text"  class="login-input" 
+            placeholder="Video de la unidad"  id="video" name="video"
+            value="<%= unit.video %>" >
+            <% if (locals.errors && errors.video) { %>
+                <p style="color: white">
+                    <%= errors.video.msg %>
+                </p>
+                <% } %>
+
+       
+                <label class="white" for="id_modulo">Id del modulo al que pertenece la unidad:</label>
+                <input type="number"  class="login-input" 
+                placeholder="Id del modulo al que pertenece la unidad"  id="id_modulo" name="id_modulo"
+                value="<%= unit.id_modulo %>" >
+                <% if (locals.errors && errors.id_modulo) { %>
+                    <p style="color: white">
+                        <%= errors.id_modulo.msg %>
+                    </p>
+                    <% } %>
+           
+            <button  class="button-from-register bg-color-blue-dark  bg-color-or"type="submit">Editar modulo</button>
+        </form>
+    </div>
+    </section>
+</main>
+</body>
+<script src="/js/loadingWithHeader.js"></script>
+</html>

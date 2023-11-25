@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("./partials/head") %> 
+    <link rel="stylesheet" href="/styles/home.css">
+    <title>Home - Rebolucion</title>
+</head>
+<body class="background-blue">
+  <div class="loading" id="loading">
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+    <header  class="hidden" id="header">
+        <!--INICIO DEL HEADER -->
+        <section class="img-container">
+            <img alt="rebolucion-logo" title="rebolucion logo" src="/images/rebolucionLogoWebHeader.png" alt="">
+        </section>
+
+
+
+        <section class="header-btn-container" <% if (locals.loggedUser) { %> style=" display: none;"    <% } %>>
+          <a class="header-a "href="https://rebolucion-production.up.railway.app/user/login">
+            <button class="background-orange white button-with-bg">Ingresar</button>
+          </a>
+          <a class="header-a "href="https://rebolucion-production.up.railway.app/user/register">
+            <button class="white background-transparent button-without-bg">Registrate</button>
+          </a>
+        </section>
+
+
+        <section class="header-btn-container-my-profile" <% if (!locals.loggedUser) { %> style=" display: none;"    <% } %>>
+                 
+          <a class="header-a "href="https://rebolucion-production.up.railway.app/user/my-profile">
+            <button class="background-orange white button-with-bg"> <i class="fa-solid fa-user"></i></button>
+          </a>
+
+          <a class="header-a "href="">
+            <button style="background: transparent;" class=" orange button-with-bg"> <i style="background: transparent;" class="fa-brands fa-discord"></i></button>
+          </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
+
+    <main class="hidden" id="main">
+        
+       <!-- <div id="carouselExample" class="carousel slide">
+          
+          <div class="phrase-container background-blueForButtons ">
+            <h1 class="white">
+              <span class="orange">reBolucionando</span> la forma de aprender
+            </h1>
+          </div>
+          
+          
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/images/homeImages/Rectangle 391.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/homeImages/Rectangle 398.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/homeImages/Rectangle 400.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          -->
+
+          <div class="container-mobile-image">
+            <img alt="rebolucionando la forma de aprender" title="rebolucion" src="/images/homeImages/mobileImage.png" alt="">
+          </div>
+        
+
+        <section class="principal-section">
+          <h2 class="white ">
+            Aprenderas:
+          </h2>
+
+
+          <section class="sub-section">
+
+           
+          <% thingsToLearn.forEach(thing => {%>
+            <div class="false-box background-light-color-box-from-behind">
+              <div class="background-light-color  div-inside">
+                <i class="<%= thing.icon %>  orange icon-card"></i>
+                <h6 class="white">
+                  <%= thing.name %>
+                </h6>
+              </div>
+            </div>
+        <% }); %>
+          
+      </section>
+  
+        </section>
+
+        <section class="second-section">
+          <div class="video-container">
+            <iframe src="https://player.vimeo.com/video/862758018?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+            </iframe>
+          </div>
+
+        
+        </section>
+
+        <div class="btn-container">
+   
+
+        <a class="white background-orange"href="https://rebolucion-production.up.railway.app/module">
+          <button class="extra-button white ">¡Accede a nuestros modulos!</button>
+        </a>
+        <a class="white background-orange"href="https://rebolucion-production.up.railway.app/resources">
+          <button class="extra-button white ">¡Recursos facilitaran tu aprendizaje!</button>
+        </a>
+      
+        </div>
+
+
+        <div class="rebolucion-info-container">
+          <h5 class="orange">Re₿olucion en numeros</h5>
+
+          <div>
+            <p class="number white">+100</p>
+            <p class="orange">horas de contenido</p>
+          </div>
+          <div>
+            <p class="number white">+8</p>
+            <p class="orange">modulos</p>
+          </div>
+          <div>
+            <p class="number white">Muchas</p>
+            <p class="orange">cosas que aprender</p>
+          </div>
+        </div>
+
+          
+        <div class="client-info-container ">
+
+          <div class="client-info-div">
+            <h6  class="white" >Sponsors</h6>
+            <p class="white">Si quieres obtener tu espacio publicitario dentro de la plataforma, no dudes en agendar tu llamada para convertirte en un sponsor de la marca.</p>
+
+
+        <a class="white background-orange"href="https://calendly.com/quotterimateo/30min">
+          <button class="extra-button white ">Agendar llamada</button>
+        </a>
+          </div>
+
+          <div class="client-info-div">
+            <h6  class="white" >Avisos </h6>
+            <p class="white">Este espacio no realiza ningun tipo de
+               recomendacion financiera, su espititu es meramente educativo, es por ello que debes conocer...</p>
+
+
+        <a class="white background-orange"href="https://rebolucion-production.up.railway.app/aviso">
+          <button class="extra-button white ">Leer mas</button>
+        </a>
+          </div>
+
+
+          
+        </div>
+        
+        <h6 class="white feedback-h6">Ayudanos dando tu <a class="orange feedback" href="https://docs.google.com/forms/d/e/1FAIpQLSdBcnODTeLDgpMi9rNp8QQZQhxf5SCQueof2jRGn2Tc-flvsA/viewform?usp=sf_link">feedback</a></h6>
+        
+      
+   
+    </main>
+
+    <footer class="background-footer hidden" id="footer">
+      <section  class="footer-section">
+        <a href="https://twitter.com/rebolucionnn">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      </section>
+      <section class="footer-section">
+        <a href="https://open.spotify.com/show/3EyKX9xEgU0K7WfyWXI9Sr">
+        <i class="fa-solid fa-podcast"></i>
+      </a>
+      </section>
+      <section class="footer-section">
+        <a href="https://tiktok.com/@rebolucionw3">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+      </section>
+      <section class="footer-section">
+        <a class="header-a "href="">
+           <i  class="fa-brands fa-discord"></i>
+        </a>
+      </section>
+    </footer>
+
+</body>
+<script src="/js/loadingWithHeader.js"></script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("./partials/head") %> 
+    <link rel="stylesheet" href="/styles/header2.css">
+
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body class="background-blue">
+
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+
+    <header class="hidden" id="header">
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="https://rebolucion-production.up.railway.app">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
+    <main class="hidden" id="main" >
+        <section class="section"> 
+            <img src="/images/rebolucionLogoWeb.png" alt="" srcset="" class="imagen-register">
+        </section>
+    <section class="big-container bg-color-blue-dark section">
+        <div class="title-container">
+        <div class="background-orange or-bar"></div>
+        <h1 class="white">Contactanos</h1>
+        </div>
+
+       <div class="false-box background-light-color-box-from-behind">
+       <form action="https://formsubmit.co/rebolucionpodcast@gmail.com" class="form background-light-color" method="POST" id="formulario" 
+        enctype="">
+            
+            <input type="email" required class="login-input background-white"
+             placeholder="Correo electronico"  id="email" name="email">
+        
+
+
+            <input type="text" required class="login-input background-white" 
+            placeholder="Coloca tu mensaje aqui." id="message" name="message">
+            
+
+
+
+            <p class="white p-from-login ">
+                Te responderemos a la brevedad.
+            </p>
+                <div class="btn-container">
+                    <i id="showPass" style="opacity: 0;" class="fa-regular  background-orange  fa-eye white" ></i>
+            <input type="submit" 
+            name="sumbit" class="button white background-orange "id="" 
+            value="➜">
+                </div>
+        </form>
+    </div>
+    </section>
+</main>
+</body>
+<script src="/js/loadingWithHeader.js"></script>
+
+</html>

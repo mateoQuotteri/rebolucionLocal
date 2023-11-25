@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include ("../partials/head") %> 
+    <link rel="stylesheet" href="/styles/header2.css">
+
+    <link rel="stylesheet" href="/styles/modules.css">
+</head>
+<body class="background-blue">
+    <div class="loading" id="loading">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <header class="hidden" id="header">
+        <!--INICIO DEL HEADER -->
+        <section class="button-of-header-container">
+         <a class="background-orange"href="https://rebolucion-production.up.railway.app">
+            <button class="background-orange white">
+                ←
+            </button>
+         </a>
+        </section>
+    <!--FIN DEL HEADER-->
+    </header>
+<main class="hidden" id="main">
+
+    <section class="big-container">
+        <div class="title-container">
+            <div class="background-orange or-bar"></div>
+            <h1 class="white">Unidades</h1>
+            </div>
+    </article>
+    </section>
+
+    <section class="principal-section">
+        <section class="sub-section">
+            <% units.forEach(unit => {%>
+                <div class="false-box background-light-color-box-from-behind">
+                    <div class="background-light-color  div-inside">
+                        
+                      <h5 class="white">
+                        <%= unit.title %>
+                      </h5>
+                      <h6 class="white">
+                        ID: <%= unit.id %>
+                      </h6>
+                      <h6 class="white">
+                        Modulo: <%= unit.id_modulo %>
+                      </h6>
+                      <a class="background-orange  white" href="https://rebolucion-production.up.railway.app/unit/<%= unit.id%>">
+                        <button class="background-orange white">
+                            Iniciar
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                <!---
+            
+                <div class="p-3 justBorderIndex  bg-light tripCard">
+                    <div>
+            
+                        <p  height="fit-content" class="text-card"><%= unit.title %> </p>
+                       
+
+                       
+                        </button>
+                        <p  height="fit-content" 
+                        class="text-card">Descripcion de la unidad :<%= unit.description %> </p>
+                        <p  height="fit-content" 
+                        class="text-card">ID de la unidad :<%= unit.id %></p>
+                        <p  height="fit-content" 
+                        class="text-card">Pertenece al modulo :<%= unit.id_modulo %> </p>
+                    </div>
+                </div>
+            -->
+            <% }); %>
+        </article>
+    </section>
+</main>
+</body>
+<script src="/js/loadingWithHeader.js"></script>
+
+</html>

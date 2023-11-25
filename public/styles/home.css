@@ -1,0 +1,521 @@
+/*CARROUSEL*/
+#carouselExample{
+    display: none;
+ }
+
+ .phrase-container{
+display: none;
+}
+
+.phrase-container h1{
+    display: none;
+
+}
+
+.container-mobile-image{
+    width: 100%;
+    height: 25%;
+}
+.container-mobile-image img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media(min-width: 480px){
+    
+}
+@media(min-width: 520px){
+    .button-container{
+        padding-top: 2em;
+       }
+   
+}
+
+
+@media(min-width: 680px){
+    .button-container button{
+        padding: 1em;
+       }
+  
+}
+
+@media(min-width: 768px){
+    .button-container button{
+        padding: 1.2em;
+       }
+}
+@media(min-width: 850px){
+    .button-container{
+        padding-top: 4em;
+       }
+  
+}
+@media(min-width: 900px){
+    .button-container button{
+        padding: 1.4em;
+       }
+    
+       .phrase-container{
+        display: block;
+        width: 100%;
+        height: 100%;
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     /*
+     top:14%;
+     left: 12%;*/
+     z-index: 1;
+     /*
+     border-radius: 1em;*/
+    }
+    #carouselExample{
+        display: block;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+     }
+    .phrase-container h1{
+        width: 75%;
+        text-align: center;
+        display: block;
+        font-size: 2.7em;
+        font-weight: bold;
+    }
+}
+@media(min-width: 1000px){
+    .button-container button{
+        padding: 1.2em;
+       }
+       .button-container button a {
+        font-size: 1.3em;
+    }
+    
+    
+}
+
+
+@media(min-width: 1024px){
+    .button-container{
+        padding-top: 6em;
+       }
+       .button-container button{
+        padding: 1.7em;
+       }
+}
+
+
+@media(min-width:1280px){
+    .button-container{
+        padding-top: 8em;
+       }
+       .button-container button{
+        padding: 1.8em;
+       }
+}
+/*FIN CARROUSEL*/
+
+/*INICIO PRINCIPAL SECTION*/
+
+.principal-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 3em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.principal-section h2{
+    text-align: center;
+    flex-basis: 100%;
+    margin-bottom: 2em;
+}
+
+.sub-section{
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: center;/*aca es*/
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.false-box{
+    width: 75%;
+    height: 70%;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+.false-box .div-inside{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 10px;
+    left: 8px;
+    padding: 2em 1em 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-inside h6{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: .9em;
+}
+
+.div-inside i{
+    width: 100%;
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: bold;
+
+}
+
+@media(min-width: 520px){
+    .false-box{
+        width: 45%;
+        
+    }
+    .false-box .div-inside{
+        padding: 1.7em 1em 1.7em 1em;
+    }
+    .div-inside h6{
+        width: 100%;
+        text-align: center;
+        font-size: .9em;
+        font-weight: bold;
+        margin-top: .9em;
+    }
+    
+    .div-inside i{
+        width: 100%;
+        text-align: center;
+        font-size: 2.2em;
+        font-weight: bold;
+    
+    }
+}
+@media(min-width: 768px){
+    .false-box{
+        width: 35%;
+        height: 70%;
+    }
+    .div-inside i{
+        font-size: 2.4em;
+        
+    }
+    
+    .div-inside h6{
+        font-size: 1.1em;    
+     }
+}
+
+@media(min-width: 1000px){
+    .false-box{
+        width: 30%;
+    }
+
+    .div-inside i{
+        font-size: 2.6em;
+        
+    }
+}
+
+
+@media(min-width: 1024px){
+}
+
+
+@media(min-width:1280px){
+  
+}
+/*FIN PRINCIPAL SECTION*/
+
+/*INICIO SEGUNDA SECTION*/
+.second-section{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: flex-start;
+  justify-content: center;
+}
+
+.second-section .video-container{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: .2em;
+  padding-bottom: .2em;
+
+}
+
+.video-container iframe{
+  width: 80%;
+  height: 90%;
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+    gap: 1em;
+  }
+.btn-container a{
+    width: 60%;
+    height: 20%;
+    border-radius: .5em;
+    border: none;
+    padding: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-container .extra-button{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+  }
+
+
+ @media(min-width: 480px){
+
+ }
+  
+ @media(min-width: 560px){
+    .video-container{
+        height: 65vh;
+        margin-bottom: 1em;
+        
+ } 
+ 
+}
+ 
+ @media(min-width: 680px){
+    .video-container{
+        height: 70vh;
+        margin-bottom: 1.3em;
+ } 
+
+.video-container iframe{
+    width: 85%;
+    height: 100%;
+  }
+ }
+ 
+ @media(min-width: 768px){
+    .video-container{
+        height: 80vh;
+        margin-bottom: 0em;
+
+ } 
+ .btn-container {
+    padding: 2em;
+    margin-top: 1.8em; 
+    margin-bottom: 1em;   
+
+  }
+
+}
+
+@media(min-width: 1000px){
+    .video-container{
+        height: 110vh;
+        width: 100%;
+ } 
+ .video-container iframe{
+    width: 100%;
+  }
+ 
+
+
+}
+
+
+@media(min-width: 1024px){
+}
+
+
+@media(min-width:1280px){
+
+
+}
+
+
+
+/*FIN SEGUNDA SECTION*/
+
+/*INICIO ACCORDION*/
+
+/*FIN ACORDION*/
+
+.client-info-container{
+  width: 100%;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;/*ACA ES*/
+  gap: 2em;
+ 
+
+}
+.client-info-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.client-info-div h6{
+  font-size: 1.8em;
+  text-align: center;
+  width: 85%;
+}
+
+  
+
+.client-info-div p{
+    text-align: center;
+    width: 75%;
+    padding: .1em;
+  }
+
+.client-info-div a{
+    width: 50%;
+    padding: .5em;
+    border-radius: .5em;
+
+  }
+
+  .client-info-div button{
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: center;
+  }
+
+  @media(min-width: 900px){
+  
+    .client-info-container{
+        flex-direction: row;/*ACA ES*/
+        gap: 2em;
+   
+       height: 40vh;
+      
+      }
+      .client-info-div{
+        width: 40%;
+      }
+      
+}
+
+/*rebolucion info container   {
+        
+      }*/
+.rebolucion-info-container{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:.5em;
+        margin-top: .8em;
+        padding: .5em;
+      }
+
+      .rebolucion-info-container h5 {
+       font-size: 2em;
+       width: 75%;
+       text-align: center;
+       font-weight: bold; 
+      }
+
+      .rebolucion-info-container div {
+       width: 100%; 
+       display: flex;
+       justify-content: center;
+       align-self: center;
+       flex-direction: column;  
+    }
+
+    .rebolucion-info-container div .number {
+     font-size: 1.8em; 
+     font-weight: bold;
+    }
+
+    .rebolucion-info-container div p {
+        width: 100%;
+        text-align: center;  
+       }
+
+       @media(min-width: 768px){
+        
+        .rebolucion-info-container{
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 1em 0 1em 0;
+          }
+          .rebolucion-info-container div {
+            width: 30%; 
+            margin-top: 1em;  
+         }
+    }
+
+    @media(min-width: 900px){
+        
+        .rebolucion-info-container{
+            margin-top: .2em;
+          }
+        
+    }
+
+
+
+    /*FEEDBACK*/
+
+    .feedback-h6{
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+      }
+    
+      .feedback{
+        font-size: 1em;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      @media(min-width: 900px){
+        
+        .feedback-h6{
+            font-size: 1.2em;
+          }
+        
+          
+        
+    }
