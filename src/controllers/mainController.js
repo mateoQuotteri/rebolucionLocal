@@ -49,6 +49,19 @@ errorGoogleAuth : (req,res)=>{
     res.render("errorAuth")
 },
 showResources :  (req,res)=>{
-    res.render("resources")
+        const resources= [{
+            name: "Bitcoin",
+            url: "http://localhost:3000/resources/bitcoin",
+            ready : true,
+            icon : "fa-brands fa-bitcoin"
+           },
+           {
+            name: "Ethereum",
+            url: "",
+            ready : false,
+            icon: "fa-brands fa-ethereum"
+           }
+        ]
+        res.render("resources", { resources: resources})
 },
 }

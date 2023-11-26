@@ -10,7 +10,7 @@ const bodyParser = require('body-parser')
 const userAuth = require("./src/middlewares/userAuth")
 let session = require("express-session")
 const passport = require("passport")
-const PORT = process.env.PORT || 3000
+const PORT =  3000
 
 app.listen(PORT, () => {
   console.log("rebolucion is starting");

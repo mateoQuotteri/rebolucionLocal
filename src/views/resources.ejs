@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <%-include ("./partials/head") %> 
-    <link rel="stylesheet" href="/styles/aviso.css">
     <link rel="stylesheet" href="/styles/header2.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/moduleDetail.css">
+    <link rel="stylesheet" href="/styles/unitDetail.css">
+    <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/resources.css">
 
     <title>Recursos</title>
 </head>
-<body class="background-blue">
+  <body class="background-blue">
   <div class="loading" id="loading">
     <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>
@@ -16,7 +19,7 @@
   <header class="hidden" id="header">
     <!--INICIO DEL HEADER -->
     <section class="button-of-header-container">
-     <a class="background-orange"href="https://rebolucion-production.up.railway.app">
+     <a class="background-orange"href="http://localhost:3000">
         <button class="background-orange white">
             ←
         </button>
@@ -27,13 +30,34 @@
 
 <main class="" id="main">
         <h1 class="orange">Recursos para aprender sobre...</h1>
-        <section class="big-section">
-            <div class="books">
-                <a class="white" href="">
-                    Bitcoin
-                </a>
-            </div>
-        </section>            
+        <section class="sub-section">
+
+       
+          <% resources.forEach(thing => {%>
+            <div class="false-box background-light-color-box-from-behind">
+              <div class="background-light-color  div-inside">
+                <i class="<%= thing.icon %>  orange icon-card"></i>
+                <h6 class="white">
+                  <%= thing.name %>
+                </h6>
+                <% if (thing.ready) { %>
+                  <a class="background-orange  white" href="<%= thing.url %>">
+                      <button class="background-orange white">
+                          Acceder
+                      </button>
+                  </a>
+              <% } else { %>
+                <a class="background-orange  white" href="">
+                  <button class="background-orange white">
+                      Proximamente
+                  </button>
+              </a>
+              <% } %>
+             
+              </div>
+            </div>  
+            <% }); %>    
+      </section>         
     </main>
 
     <footer class="background-footer">
