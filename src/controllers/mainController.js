@@ -61,6 +61,27 @@ showResources :  (req,res)=>{
             ready : false,
             icon: "fa-brands fa-ethereum"
            }
+           ,
+           {
+            name: "AI",
+            url: "",
+            ready : false,
+            icon: "fa-solid fa-brain"
+           }
+           ,
+           {
+            name: "Edicion de Video",
+            url: "",
+            ready : false,
+            icon: "fa-solid fa-video"
+           }
+           ,
+           {
+            name: "DeFi",
+            url: "",
+            ready : false,
+            icon: "fa-solid fa-square-poll-vertical"
+           }
         ]
         res.render("resources", { resources: resources})
 },
