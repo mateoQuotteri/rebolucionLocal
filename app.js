@@ -3,6 +3,8 @@ const app = express();
 const methodOverride = require("method-override")
 const mainRoutes = require("./src/routes/mainRoutes");
 const userRoutes = require("./src/routes/userRoutes");
+const resourcesRoutes = require("./src/routes/resourcesRoutes");
+
 const productRoutes = require("./src/routes/productRoutes");
 const unitRoutes = require("./src/routes/unitRoutes")
 const teacherRoutes = require("./src/routes/teacherRoutes")
@@ -54,6 +56,8 @@ app.use('/user', userRoutes)
 app.use('/module', productRoutes)
 app.use("/unit", unitRoutes)
 app.use("/teacher", teacherRoutes)
+app.use("/resources", resourcesRoutes)
+
 
 app.use((req, res, next) => {
   res.status(404).render("not-found")
